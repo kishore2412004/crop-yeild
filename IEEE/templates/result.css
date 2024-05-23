@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(https://img.freepik.com/photos-gratuite/feuilles-bourgeons-the-vert-plantations-the-vert-matin_335224-955.jpg?w=2000);
+    background-image: url(https://indiaforensic.com/certifications/wp-content/uploads/2017/01/agriculture.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.result{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 130px;
+    color: black;    
+}

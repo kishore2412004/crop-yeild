@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/8e4da32d54.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="/logo.png" class="logo">
+                <h1><span>F</span>arm<span>E</span>zy</h1>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Contact us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>  
+
+    <div id="crop">
+        <div class="container">
+            <h1 class="sub-title">Choose your need!</h1>
+            <div class="work-list">
+                <div class="work">
+                    <button onclick="openForm()">
+                        <img src="/yield.jpg">
+                        <div class="layer">
+                            <h2>Crop Yeild Prediction</h2>
+                        </div>
+                    </button>
+                    <div class="popup-overlay">
+                    </div>
+                    <div class="popup">
+                        <h2>Crop Yeild Prediction</h2><br>
+                        <button onclick="closeForm()"><i class="fa-solid fa-xmark"></i></button>
+                        <form method="post">
+                            <div id="popup-container" class="popup-container">
+                                <div class="popup-form">
+                                    <form id="crop-form">
+                                        <label for="state">State:</label>
+                                        <select name="state" id="state">
+                                            <option value="tn">TamilNadu</option>
+                                        </select><br>
+                                        <label for="district">District:</label>
+                                        <select name="district" id="district">
+                                            <option value="tvl">Tirunelveli</option>
+                                            <option value="kk">Kanniyakumari</option>
+                                        </select><br>
+                                        <label for="season-type">Season Type:</label>
+                                        <select name="season-type" id="season-type">
+                                            <option value="Kharif">Kharif</option>
+                                            <option value="Rabi">Rabi</option>
+                                            <option value="Zaid">Zaid</option>
+                                        </select><br>
+                                        <label for="crop-type">Crop Type:</label>
+                                        <select name="crop-type" id="crop-type">
+                                            <option value="Wheat">Wheat</option>
+                                            <option value="Rice">Rice</option>
+                                            <option value="Maize">Maize</option>
+                                            <option value="Sugarcane">Sugarcane</option>
+                                            <option value="Cotton">Cotton</option>
+                                            <option value="Pulses">Pulses</option>
+                                            <option value="Oilseeds">Oilseeds</option>
+                                            <option value="Fruits">Fruits</option>
+                                            <option value="Vegetables">Vegetables</option>
+                                        </select><br>
+                                        <label for="soil-type">Soil Type:</label>
+                                        <select name="soil-type" id="soil-type">
+                                            <option value="Alluvial">Alluvial</option>
+                                            <option value="Black">Black</option>
+                                            <option value="Red">Red</option>
+                                            <option value="Laterite">Laterite</option>
+                                            <option value="Mountain">Mountain</option>
+                                            <option value="Desert">Desert</option>
+                                        </select><br>
+                                        <label for="crop-year">Crop Year:</label>
+                                        <input type="number" name="crop-year" id="crop-year"><br>
+                                        <label for="area">Area:</label>
+                                        <input type="number" name="area" id="area"><br>
+                                        <label for="temperature">Temperature:</label>
+                                        <input type="number" name="temperature" id="temperature"><br>
+                                        <label for="wind-speed">Wind Speed:</label>
+                                        <input type="number" name="wind-speed" id="wind-speed"><br>
+                                        <label for="pressure">Pressure:</label>
+                                        <input type="number" name="pressure" id="pressure"><br>
+                                        <label for="humidity">Humidity:</label>
+                                        <input type="number" name="humidity" id="humidity"><br>
+                                        <label for="nitrogen">Nitrogen:</label>
+                                        <input type="number" name="nitrogen" id="nitrogen"><br>
+                                        <label for="phosphorus">Phosphorus:</label>
+                                        <input type="number" name="phosphorus" id="phosphorus"><br>
+                                        <label for="potassium">Potassium:</label>
+                                        <input type="number" name="potassium" id="potassium"><br>                              
+                                        <a href="/yeild.html"><button type="submit" class="submit" onclick="predict()">Submit</button></a>
+                                        
+                                    </form>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="work">
+                    <button onclick="openForm()">
+                        <img src="/crop yield.jpg">
+                        <div class="layer">
+                            <h2>Crop Suggestion</h2>
+                        </div>
+                    </button>
+                    <div class="popup-overlay">
+                    </div>
+                    <div class="popup">
+                        <h2>Crop Suggestion</h2><br>
+                        <button onclick="closeForm()"><i class="fa-solid fa-xmark"></i></button>
+                        <form  method="post">
+                            <div id="popup-container" class="popup-container">
+                                <div class="popup-form">
+                                    <form id="crop-form">
+                                        <label for="state">State:</label>
+                                        <select name="state" id="state">
+                                            <option value="tn">TamilNadu</option>
+                                        </select><br>
+                                        <label for="district">District:</label>
+                                        <select name="district" id="district">
+                                            <option value="tvl">Tirunelveli</option>
+                                            <option value="kk">Kanniyakumari</option>
+                                        </select><br>
+                                        <label for="season-type">Season Type:</label>
+                                        <select name="season-type" id="season-type">
+                                            <option value="Kharif">Kharif</option>
+                                            <option value="Rabi">Rabi</option>
+                                            <option value="Zaid">Zaid</option>
+                                        </select><br>
+                                        <label for="crop-type">Crop Type:</label>
+                                        <select name="crop-type" id="crop-type">
+                                            <option value="Wheat">Wheat</option>
+                                            <option value="Rice">Rice</option>
+                                            <option value="Maize">Maize</option>
+                                            <option value="Sugarcane">Sugarcane</option>
+                                            <option value="Cotton">Cotton</option>
+                                            <option value="Pulses">Pulses</option>
+                                            <option value="Oilseeds">Oilseeds</option>
+                                            <option value="Fruits">Fruits</option>
+                                            <option value="Vegetables">Vegetables</option>
+                                        </select><br>
+                                        <label for="soil-type">Soil Type:</label>
+                                        <select name="soil-type" id="soil-type">
+                                            <option value="Alluvial">Alluvial</option>
+                                            <option value="Black">Black</option>
+                                            <option value="Red">Red</option>
+                                            <option value="Laterite">Laterite</option>
+                                            <option value="Mountain">Mountain</option>
+                                            <option value="Desert">Desert</option>
+                                        </select><br>
+                                        <label for="crop-year">Crop Year:</label>
+                                        <input type="number" name="crop-year" id="crop-year" required><br>
+                                        <label for="area">Area:</label>
+                                        <input type="number" name="area" id="area" required><br>
+                                        <label for="temperature">Temperature:</label>
+                                        <input type="number" name="temperature" id="temperature" required><br>
+                                        <label for="wind-speed">Wind Speed:</label>
+                                        <input type="number" name="wind-speed" id="wind-speed" required><br>
+                                        <label for="pressure">Pressure:</label>
+                                        <input type="number" name="pressure" id="pressure" required><br>
+                                        <label for="humidity">Humidity:</label>
+                                        <input type="number" name="humidity" id="humidity" required><br>
+                                        <label for="nitrogen">Nitrogen:</label>
+                                        <input type="number" name="nitrogen" id="nitrogen" required><br>
+                                        <label for="phosphorus">Phosphorus:</label>
+                                        <input type="number" name="phosphorus" id="phosphorus" required><br>
+                                        <label for="potassium">Potassium:</label>
+                                        <input type="number" name="potassium" id="potassium" required><br>                              
+                                        <button type="submit" class="submit">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="work">
+                    <button onclick="of()">
+                        <img src="/fertilizer.jpg">
+                        <div class="layer">
+                            <h2>Fertilizer Suggestion</h2>
+                        </div>
+                    </button>
+                    <div class="popup-o">
+                    </div>
+                    <div class="popup-s">
+                        <h2>Fertilizer Suggestion</h2><br>
+                        <button onclick="cf()"><i class="fa-solid fa-xmark"></i></button>
+                        <form>
+                            <div id="popup-c" class="popup-c">
+                                <div class="popup-f">
+                                    <form id="crop-form">
+                                        <label for="crop-type">Crop Type:</label>
+                                        <select name="crop-type" id="crop-type">
+                                            <option value="Wheat">Wheat</option>
+                                            <option value="Rice">Rice</option>
+                                            <option value="Maize">Maize</option>
+                                            <option value="Sugarcane">Sugarcane</option>
+                                            <option value="Cotton">Cotton</option>
+                                            <option value="Pulses">Pulses</option>
+                                            <option value="Oilseeds">Oilseeds</option>
+                                            <option value="Fruits">Fruits</option>
+                                            <option value="Vegetables">Vegetables</option>
+                                        </select><br>
+                                        <label for="soil-type">Soil Type:</label>
+                                        <select name="soil-type" id="soil-type">
+                                            <option value="Alluvial">Alluvial</option>
+                                            <option value="Black">Black</option>
+                                            <option value="Red">Red</option>
+                                            <option value="Laterite">Laterite</option>
+                                            <option value="Mountain">Mountain</option>
+                                            <option value="Desert">Desert</option>
+                                        </select><br>
+                                        <label for="temperature">Temperature:</label>
+                                        <input type="number" name="temperature" id="temperature" required><br>
+                                        <label for="moisture">Moisture:</label>
+                                        <input type="number" name="moisture" id="moisture" required><br>
+                                        <label for="humidity">Humidity:</label>
+                                        <input type="number" name="humidity" id="humidity" required><br>
+                                        <label for="nitrogen">Nitrogen:</label>
+                                        <input type="number" name="nitrogen" id="nitrogen" required><br>
+                                        <label for="phosphorus">Phosphorus:</label>
+                                        <input type="number" name="phosphorus" id="phosphorus" required><br>
+                                        <label for="potassium">Potassium:</label>
+                                        <input type="number" name="potassium" id="potassium" required><br>                              
+                                        <a href="/templates/fertilizer result.html"><button type="submit" class="submit">Submit</button></a>
+                                    </form>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1>Contact us</h1>
+                    <p><i class="fa-regular fa-envelope"></i>marisankar4002@gmail.com</p>
+                    <p><i class="fa-brands fa-square-whatsapp"></i>+916383700486</p>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+		function openForm() {
+			document.querySelector('.popup-overlay').style.display = 'block';
+			document.querySelector('.popup').style.display = 'block';
+		}
+		function closeForm() {
+			document.querySelector('.popup-overlay').style.display = 'none';
+			document.querySelector('.popup').style.display = 'none';
+		}
+        function of() {
+			document.querySelector('.popup-o').style.display = 'block';
+			document.querySelector('.popup-s').style.display = 'block';
+		}
+		function cf() {
+			document.querySelector('.popup-o').style.display = 'none';
+			document.querySelector('.popup-s').style.display = 'none';
+		}
+	</script>
+</body>
+</html>
